@@ -1,0 +1,23 @@
+type User {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  # Credentials
+  email: String! @unique
+  password: String!
+
+  # Details
+  firstName: String
+  lastName: String
+  phone: String
+
+  # Password Meta
+  passwordMeta: PasswordMeta
+}
+
+type PasswordMeta {
+  id: ID! @unique
+  createdAt: DateTime!
+  resetToken: String!
+}

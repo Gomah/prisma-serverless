@@ -1,0 +1,20 @@
+# The endpoint of your Prisma API (deployed to a Prisma Sandbox).
+endpoint: ${env:PRISMA_ENDPOINT}
+
+# The file containing the definition of your data model.
+datamodel:
+  - datamodel.graphql
+
+# Generate
+generate:
+  - generator: typescript-client
+    output: ../src/generated/prisma-client/
+  - generator: graphql-schema
+    output: ../src/generated/
+
+hooks:
+  post-deploy:
+    - prisma generate --endpoint
+    - npx nexus-prisma-generate --client ./src/generated/prisma-client --output ./src/generated/nexus-prisma # Runs the codegen tool from nexus-prisma.
+
+secret: ${env:PRISMA_SECRET}

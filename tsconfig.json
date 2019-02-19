@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "esnext", "esnext.asynciterable"],
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./build",
+    "moduleResolution": "node",
+    "pretty": true,
+    "skipLibCheck": true,
+    "target": "esnext"
+  },
+  "include": ["src/**/*", "typings/**/*"],
+  "exclude": ["node_modules"]
+}
