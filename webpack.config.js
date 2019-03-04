@@ -4,7 +4,7 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
 function resolve(dir) {
-  return path.join(__dirname, '../', dir);
+  return path.join(__dirname, './', dir);
 }
 
 module.exports = {
@@ -54,7 +54,6 @@ module.exports = {
 
   // Copy generated schema & nexus files
   // TODO: Refactor, there's probably a better way to do that :)
-
   plugins: [
     new CopyPlugin([
       {
