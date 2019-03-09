@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "git@github.com:gomah/prisma-serverless.git",
   "author": "Gomah <hi@gomah.fr>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "rm -rf build/ && yarn nexus-generate && tsc -b",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "apollo-server-lambda": "^2.4.8",
+    "aws-sdk": "^2.290.0",
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.3",
@@ -35,7 +36,7 @@
     "graphql-shield": "^5.3.0",
     "graphql-tools": "^4.0.4",
     "jsonwebtoken": "^8.5.0",
-    "nexus": "^0.10.0",
+    "nexus": "^0.11.1",
     "nexus-prisma": "^0.3.4",
     "prisma-client-lib": "^1.28.1",
     "uuid": "^3.3.2"
@@ -47,8 +48,8 @@
     "@types/bcryptjs": "^2.4.2",
     "@types/dotenv": "^6.1.0",
     "@types/graphql": "^14.0.7",
-    "@types/jsonwebtoken": "^8.3.1",
-    "@types/node": "^11.10.5",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/node": "^11.11.0",
     "@types/uuid": "^3.4.4",
     "@types/ws": "^6.0.1",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
