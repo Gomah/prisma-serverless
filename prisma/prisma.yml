@@ -18,3 +18,6 @@ hooks:
     - npx nexus-prisma-generate --client ./src/generated/prisma-client --output ./src/generated/nexus-prisma # Runs the codegen tool from nexus-prisma.
 
 secret: ${env:PRISMA_SECRET}
+
+seed:
+  run: yarn ts-node ./prisma/seed/index.ts

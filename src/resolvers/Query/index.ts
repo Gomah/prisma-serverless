@@ -1,8 +1,11 @@
-import { queryType } from 'nexus';
+import { prismaObjectType } from 'nexus-prisma';
 import { getUserId } from '../../utils';
 
-export const Query = queryType({
-  definition(t) {
+export const Query = prismaObjectType({
+  name: 'Query',
+  definition: t => {
+    t.prismaFields(['*']);
+
     t.field('profile', {
       type: 'User',
       resolve: (parent, args, ctx) => {

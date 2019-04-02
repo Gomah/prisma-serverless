@@ -1,12 +1,15 @@
-import { stringArg, idArg, mutationType } from 'nexus';
+import { stringArg } from 'nexus';
+import { prismaObjectType } from 'nexus-prisma';
 
 // Account
 import { login } from './account/login';
 import { signup } from './account/signup';
-import { updateProfile } from './account/update-profile';
 
-export const Mutation = mutationType({
-  definition(t) {
+export const Mutation = prismaObjectType({
+  name: 'Mutation',
+  definition: t => {
+    t.prismaFields(['*']);
+
     t.field('signup', {
       type: 'AuthPayload',
       args: {
@@ -26,20 +29,6 @@ export const Mutation = mutationType({
         password: stringArg(),
       },
       resolve: login,
-    });
-
-    t.field('updateProfile', {
-      type: 'User',
-
-      args: {
-        id: idArg(),
-        firstName: stringArg({ nullable: true }),
-        lastName: stringArg({ nullable: true }),
-        phone: stringArg({ nullable: true }),
-        email: stringArg({ nullable: true }),
-        password: stringArg({ nullable: true }),
-      },
-      resolve: updateProfile,
     });
   },
 });

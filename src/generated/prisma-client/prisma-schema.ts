@@ -323,6 +323,7 @@ type User implements Node {
   updatedAt: DateTime!
   email: String!
   password: String!
+  role: UserRole!
   firstName: String
   lastName: String
   phone: String
@@ -343,6 +344,7 @@ input UserCreateInput {
   id: ID
   email: String!
   password: String!
+  role: UserRole
   firstName: String
   lastName: String
   phone: String
@@ -369,6 +371,8 @@ enum UserOrderByInput {
   email_DESC
   password_ASC
   password_DESC
+  role_ASC
+  role_DESC
   firstName_ASC
   firstName_DESC
   lastName_ASC
@@ -383,9 +387,15 @@ type UserPreviousValues {
   updatedAt: DateTime!
   email: String!
   password: String!
+  role: UserRole!
   firstName: String
   lastName: String
   phone: String
+}
+
+enum UserRole {
+  USER
+  ADMIN
 }
 
 type UserSubscriptionPayload {
@@ -428,6 +438,7 @@ input UserSubscriptionWhereInput {
 input UserUpdateInput {
   email: String
   password: String
+  role: UserRole
   firstName: String
   lastName: String
   phone: String
@@ -437,6 +448,7 @@ input UserUpdateInput {
 input UserUpdateManyMutationInput {
   email: String
   password: String
+  role: UserRole
   firstName: String
   lastName: String
   phone: String
@@ -615,6 +627,16 @@ input UserWhereInput {
 
   """All values not ending with the given string."""
   password_not_ends_with: String
+  role: UserRole
+
+  """All values that are not equal to given value."""
+  role_not: UserRole
+
+  """All values that are contained in given list."""
+  role_in: [UserRole!]
+
+  """All values that are not contained in given list."""
+  role_not_in: [UserRole!]
   firstName: String
 
   """All values that are not equal to given value."""

@@ -73,6 +73,7 @@ export interface NexusPrismaTypes {
     }
   }
   enumTypes: {
+    UserRole: UserRoleValues,
     UserOrderByInput: UserOrderByInputValues,
     PasswordMetaOrderByInput: PasswordMetaOrderByInputValues,
     MutationType: MutationTypeValues,
@@ -228,6 +229,7 @@ type UserObject =
   | { name: 'updatedAt', args?: [] | false, alias?: string  } 
   | { name: 'email', args?: [] | false, alias?: string  } 
   | { name: 'password', args?: [] | false, alias?: string  } 
+  | { name: 'role', args?: [] | false, alias?: string  } 
   | { name: 'firstName', args?: [] | false, alias?: string  } 
   | { name: 'lastName', args?: [] | false, alias?: string  } 
   | { name: 'phone', args?: [] | false, alias?: string  } 
@@ -239,6 +241,7 @@ type UserFields =
   | 'updatedAt'
   | 'email'
   | 'password'
+  | 'role'
   | 'firstName'
   | 'lastName'
   | 'phone'
@@ -288,6 +291,19 @@ export interface UserFieldDetails {
     list: undefined
     nullable: false
     resolve: undefined
+  }
+  role: {
+    type: 'UserRole'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"User">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.UserRole> | prisma.UserRole
   }
   firstName: {
     type: 'String'
@@ -1057,6 +1073,7 @@ type UserPreviousValuesObject =
   | { name: 'updatedAt', args?: [] | false, alias?: string  } 
   | { name: 'email', args?: [] | false, alias?: string  } 
   | { name: 'password', args?: [] | false, alias?: string  } 
+  | { name: 'role', args?: [] | false, alias?: string  } 
   | { name: 'firstName', args?: [] | false, alias?: string  } 
   | { name: 'lastName', args?: [] | false, alias?: string  } 
   | { name: 'phone', args?: [] | false, alias?: string  } 
@@ -1067,6 +1084,7 @@ type UserPreviousValuesFields =
   | 'updatedAt'
   | 'email'
   | 'password'
+  | 'role'
   | 'firstName'
   | 'lastName'
   | 'phone'
@@ -1115,6 +1133,19 @@ export interface UserPreviousValuesFieldDetails {
     list: undefined
     nullable: false
     resolve: undefined
+  }
+  role: {
+    type: 'UserRole'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: (
+      root: core.RootValue<"UserPreviousValues">,
+      args: {  }  ,
+      context: core.GetGen<"context">,
+      info?: GraphQLResolveInfo
+    ) => Promise<prisma.UserRole> | prisma.UserRole
   }
   firstName: {
     type: 'String'
@@ -1327,6 +1358,10 @@ export interface UserWhereInput {
   password_not_starts_with?: string | null
   password_ends_with?: string | null
   password_not_ends_with?: string | null
+  role?: prisma.UserRole | null
+  role_not?: prisma.UserRole | null
+  role_in?: prisma.UserRole[]
+  role_not_in?: prisma.UserRole[]
   firstName?: string | null
   firstName_not?: string | null
   firstName_in?: string[]
@@ -1434,6 +1469,10 @@ export type UserWhereInputInputObject =
   | { name: 'password_not_starts_with', alias?: string  } 
   | { name: 'password_ends_with', alias?: string  } 
   | { name: 'password_not_ends_with', alias?: string  } 
+  | { name: 'role', alias?: string  } 
+  | { name: 'role_not', alias?: string  } 
+  | { name: 'role_in', alias?: string  } 
+  | { name: 'role_not_in', alias?: string  } 
   | { name: 'firstName', alias?: string  } 
   | { name: 'firstName_not', alias?: string  } 
   | { name: 'firstName_in', alias?: string  } 
@@ -1574,6 +1613,7 @@ export type PasswordMetaWhereUniqueInputInputObject =
 export interface UserCreateInput {
   email?: string
   password?: string
+  role?: prisma.UserRole | null
   firstName?: string | null
   lastName?: string | null
   phone?: string | null
@@ -1583,6 +1623,7 @@ export type UserCreateInputInputObject =
   | Extract<keyof UserCreateInput, string>
   | { name: 'email', alias?: string  } 
   | { name: 'password', alias?: string  } 
+  | { name: 'role', alias?: string  } 
   | { name: 'firstName', alias?: string  } 
   | { name: 'lastName', alias?: string  } 
   | { name: 'phone', alias?: string  } 
@@ -1607,6 +1648,7 @@ export type PasswordMetaCreateInputInputObject =
 export interface UserUpdateInput {
   email?: string | null
   password?: string | null
+  role?: prisma.UserRole | null
   firstName?: string | null
   lastName?: string | null
   phone?: string | null
@@ -1616,6 +1658,7 @@ export type UserUpdateInputInputObject =
   | Extract<keyof UserUpdateInput, string>
   | { name: 'email', alias?: string  } 
   | { name: 'password', alias?: string  } 
+  | { name: 'role', alias?: string  } 
   | { name: 'firstName', alias?: string  } 
   | { name: 'lastName', alias?: string  } 
   | { name: 'phone', alias?: string  } 
@@ -1657,6 +1700,7 @@ export type PasswordMetaUpsertNestedInputInputObject =
 export interface UserUpdateManyMutationInput {
   email?: string | null
   password?: string | null
+  role?: prisma.UserRole | null
   firstName?: string | null
   lastName?: string | null
   phone?: string | null
@@ -1665,6 +1709,7 @@ export type UserUpdateManyMutationInputInputObject =
   | Extract<keyof UserUpdateManyMutationInput, string>
   | { name: 'email', alias?: string  } 
   | { name: 'password', alias?: string  } 
+  | { name: 'role', alias?: string  } 
   | { name: 'firstName', alias?: string  } 
   | { name: 'lastName', alias?: string  } 
   | { name: 'phone', alias?: string  } 
@@ -1726,6 +1771,10 @@ export type PasswordMetaSubscriptionWhereInputInputObject =
   | { name: 'NOT', alias?: string  } 
   
 
+export type UserRoleValues =
+  | 'USER'
+  | 'ADMIN'
+  
 export type UserOrderByInputValues =
   | 'id_ASC'
   | 'id_DESC'
@@ -1737,6 +1786,8 @@ export type UserOrderByInputValues =
   | 'email_DESC'
   | 'password_ASC'
   | 'password_DESC'
+  | 'role_ASC'
+  | 'role_DESC'
   | 'firstName_ASC'
   | 'firstName_DESC'
   | 'lastName_ASC'

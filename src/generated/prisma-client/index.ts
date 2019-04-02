@@ -164,12 +164,18 @@ export type UserOrderByInput =
   | "email_DESC"
   | "password_ASC"
   | "password_DESC"
+  | "role_ASC"
+  | "role_DESC"
   | "firstName_ASC"
   | "firstName_DESC"
   | "lastName_ASC"
   | "lastName_DESC"
   | "phone_ASC"
   | "phone_DESC";
+
+export type UserRole = "USER" | "ADMIN";
+
+export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
 export type PasswordMetaOrderByInput =
   | "id_ASC"
@@ -181,17 +187,11 @@ export type PasswordMetaOrderByInput =
   | "updatedAt_ASC"
   | "updatedAt_DESC";
 
-export type MutationType = "CREATED" | "UPDATED" | "DELETED";
-
-export type UserWhereUniqueInput = AtLeastOne<{
-  id: ID_Input;
-  email?: String;
-}>;
-
 export interface UserCreateInput {
   id?: ID_Input;
   email: String;
   password: String;
+  role?: UserRole;
   firstName?: String;
   lastName?: String;
   phone?: String;
@@ -264,6 +264,10 @@ export interface UserWhereInput {
   password_not_starts_with?: String;
   password_ends_with?: String;
   password_not_ends_with?: String;
+  role?: UserRole;
+  role_not?: UserRole;
+  role_in?: UserRole[] | UserRole;
+  role_not_in?: UserRole[] | UserRole;
   firstName?: String;
   firstName_not?: String;
   firstName_in?: String[] | String;
@@ -314,21 +318,6 @@ export interface PasswordMetaUpsertNestedInput {
   create: PasswordMetaCreateInput;
 }
 
-export interface UserSubscriptionWhereInput {
-  AND?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-  OR?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-  NOT?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
-  mutation_in?: MutationType[] | MutationType;
-  updatedFields_contains?: String;
-  updatedFields_contains_every?: String[] | String;
-  updatedFields_contains_some?: String[] | String;
-  node?: UserWhereInput;
-}
-
-export interface PasswordMetaUpdateDataInput {
-  resetToken?: String;
-}
-
 export interface PasswordMetaWhereInput {
   AND?: PasswordMetaWhereInput[] | PasswordMetaWhereInput;
   OR?: PasswordMetaWhereInput[] | PasswordMetaWhereInput;
@@ -371,6 +360,23 @@ export interface PasswordMetaWhereInput {
   resetToken_not_ends_with?: String;
 }
 
+export interface PasswordMetaUpdateDataInput {
+  resetToken?: String;
+}
+
+export interface PasswordMetaUpdateManyMutationInput {
+  resetToken?: String;
+}
+
+export interface UserUpdateManyMutationInput {
+  email?: String;
+  password?: String;
+  role?: UserRole;
+  firstName?: String;
+  lastName?: String;
+  phone?: String;
+}
+
 export interface PasswordMetaCreateOneInput {
   create?: PasswordMetaCreateInput;
   connect?: PasswordMetaWhereUniqueInput;
@@ -384,6 +390,7 @@ export interface PasswordMetaCreateInput {
 export interface UserUpdateInput {
   email?: String;
   password?: String;
+  role?: UserRole;
   firstName?: String;
   lastName?: String;
   phone?: String;
@@ -416,20 +423,24 @@ export interface PasswordMetaSubscriptionWhereInput {
   node?: PasswordMetaWhereInput;
 }
 
-export interface UserUpdateManyMutationInput {
-  email?: String;
-  password?: String;
-  firstName?: String;
-  lastName?: String;
-  phone?: String;
-}
-
-export interface PasswordMetaUpdateManyMutationInput {
-  resetToken?: String;
+export interface UserSubscriptionWhereInput {
+  AND?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
+  OR?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
+  NOT?: UserSubscriptionWhereInput[] | UserSubscriptionWhereInput;
+  mutation_in?: MutationType[] | MutationType;
+  updatedFields_contains?: String;
+  updatedFields_contains_every?: String[] | String;
+  updatedFields_contains_some?: String[] | String;
+  node?: UserWhereInput;
 }
 
 export type PasswordMetaWhereUniqueInput = AtLeastOne<{
   id: ID_Input;
+}>;
+
+export type UserWhereUniqueInput = AtLeastOne<{
+  id: ID_Input;
+  email?: String;
 }>;
 
 /*
@@ -440,20 +451,35 @@ export interface NodeNode {
   id: ID_Output;
 }
 
-export interface AggregatePasswordMeta {
-  count: Int;
+/*
+ * An edge in a connection.
+
+ */
+export interface PasswordMetaEdge {
+  node: PasswordMeta;
+  cursor: String;
 }
 
-export interface AggregatePasswordMetaPromise
-  extends Promise<AggregatePasswordMeta>,
+/*
+ * An edge in a connection.
+
+ */
+export interface PasswordMetaEdgePromise
+  extends Promise<PasswordMetaEdge>,
     Fragmentable {
-  count: () => Promise<Int>;
+  node: <T = PasswordMetaPromise>() => T;
+  cursor: () => Promise<String>;
 }
 
-export interface AggregatePasswordMetaSubscription
-  extends Promise<AsyncIterator<AggregatePasswordMeta>>,
+/*
+ * An edge in a connection.
+
+ */
+export interface PasswordMetaEdgeSubscription
+  extends Promise<AsyncIterator<PasswordMetaEdge>>,
     Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
+  node: <T = PasswordMetaSubscription>() => T;
+  cursor: () => Promise<AsyncIterator<String>>;
 }
 
 export interface BatchPayload {
@@ -494,53 +520,20 @@ export interface PasswordMetaPreviousValuesSubscription
   resetToken: () => Promise<AsyncIterator<String>>;
 }
 
-export interface PasswordMeta extends Node {
-  id: ID_Output;
-  createdAt: DateTimeOutput;
-  resetToken: String;
+export interface AggregatePasswordMeta {
+  count: Int;
 }
 
-export interface PasswordMetaPromise
-  extends Promise<PasswordMeta>,
-    Fragmentable,
-    Node {
-  id: () => Promise<ID_Output>;
-  createdAt: () => Promise<DateTimeOutput>;
-  resetToken: () => Promise<String>;
-}
-
-export interface PasswordMetaSubscription
-  extends Promise<AsyncIterator<PasswordMeta>>,
-    Fragmentable,
-    Node {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  resetToken: () => Promise<AsyncIterator<String>>;
-}
-
-export interface UserSubscriptionPayload {
-  mutation: MutationType;
-  node: User;
-  updatedFields: String[];
-  previousValues: UserPreviousValues;
-}
-
-export interface UserSubscriptionPayloadPromise
-  extends Promise<UserSubscriptionPayload>,
+export interface AggregatePasswordMetaPromise
+  extends Promise<AggregatePasswordMeta>,
     Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = UserPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = UserPreviousValuesPromise>() => T;
+  count: () => Promise<Int>;
 }
 
-export interface UserSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<UserSubscriptionPayload>>,
+export interface AggregatePasswordMetaSubscription
+  extends Promise<AsyncIterator<AggregatePasswordMeta>>,
     Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = UserSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = UserPreviousValuesSubscription>() => T;
+  count: () => Promise<AsyncIterator<Int>>;
 }
 
 /*
@@ -576,49 +569,13 @@ export interface PasswordMetaConnectionSubscription
   aggregate: <T = AggregatePasswordMetaSubscription>() => T;
 }
 
-export interface UserPreviousValues {
-  id: ID_Output;
-  createdAt: DateTimeOutput;
-  updatedAt: DateTimeOutput;
-  email: String;
-  password: String;
-  firstName?: String;
-  lastName?: String;
-  phone?: String;
-}
-
-export interface UserPreviousValuesPromise
-  extends Promise<UserPreviousValues>,
-    Fragmentable {
-  id: () => Promise<ID_Output>;
-  createdAt: () => Promise<DateTimeOutput>;
-  updatedAt: () => Promise<DateTimeOutput>;
-  email: () => Promise<String>;
-  password: () => Promise<String>;
-  firstName: () => Promise<String>;
-  lastName: () => Promise<String>;
-  phone: () => Promise<String>;
-}
-
-export interface UserPreviousValuesSubscription
-  extends Promise<AsyncIterator<UserPreviousValues>>,
-    Fragmentable {
-  id: () => Promise<AsyncIterator<ID_Output>>;
-  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
-  email: () => Promise<AsyncIterator<String>>;
-  password: () => Promise<AsyncIterator<String>>;
-  firstName: () => Promise<AsyncIterator<String>>;
-  lastName: () => Promise<AsyncIterator<String>>;
-  phone: () => Promise<AsyncIterator<String>>;
-}
-
 export interface User extends Node {
   id: ID_Output;
   createdAt: DateTimeOutput;
   updatedAt: DateTimeOutput;
   email: String;
   password: String;
+  role: UserRole;
   firstName?: String;
   lastName?: String;
   phone?: String;
@@ -630,6 +587,7 @@ export interface UserPromise extends Promise<User>, Fragmentable, Node {
   updatedAt: () => Promise<DateTimeOutput>;
   email: () => Promise<String>;
   password: () => Promise<String>;
+  role: () => Promise<UserRole>;
   firstName: () => Promise<String>;
   lastName: () => Promise<String>;
   phone: () => Promise<String>;
@@ -645,57 +603,11 @@ export interface UserSubscription
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   email: () => Promise<AsyncIterator<String>>;
   password: () => Promise<AsyncIterator<String>>;
+  role: () => Promise<AsyncIterator<UserRole>>;
   firstName: () => Promise<AsyncIterator<String>>;
   lastName: () => Promise<AsyncIterator<String>>;
   phone: () => Promise<AsyncIterator<String>>;
   passwordMeta: <T = PasswordMetaSubscription>() => T;
-}
-
-export interface AggregateUser {
-  count: Int;
-}
-
-export interface AggregateUserPromise
-  extends Promise<AggregateUser>,
-    Fragmentable {
-  count: () => Promise<Int>;
-}
-
-export interface AggregateUserSubscription
-  extends Promise<AsyncIterator<AggregateUser>>,
-    Fragmentable {
-  count: () => Promise<AsyncIterator<Int>>;
-}
-
-/*
- * An edge in a connection.
-
- */
-export interface PasswordMetaEdge {
-  node: PasswordMeta;
-  cursor: String;
-}
-
-/*
- * An edge in a connection.
-
- */
-export interface PasswordMetaEdgePromise
-  extends Promise<PasswordMetaEdge>,
-    Fragmentable {
-  node: <T = PasswordMetaPromise>() => T;
-  cursor: () => Promise<String>;
-}
-
-/*
- * An edge in a connection.
-
- */
-export interface PasswordMetaEdgeSubscription
-  extends Promise<AsyncIterator<PasswordMetaEdge>>,
-    Fragmentable {
-  node: <T = PasswordMetaSubscription>() => T;
-  cursor: () => Promise<AsyncIterator<String>>;
 }
 
 /*
@@ -725,6 +637,31 @@ export interface UserEdgeSubscription
     Fragmentable {
   node: <T = UserSubscription>() => T;
   cursor: () => Promise<AsyncIterator<String>>;
+}
+
+export interface UserSubscriptionPayload {
+  mutation: MutationType;
+  node: User;
+  updatedFields: String[];
+  previousValues: UserPreviousValues;
+}
+
+export interface UserSubscriptionPayloadPromise
+  extends Promise<UserSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = UserPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = UserPreviousValuesPromise>() => T;
+}
+
+export interface UserSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<UserSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = UserSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = UserPreviousValuesSubscription>() => T;
 }
 
 /*
@@ -758,6 +695,111 @@ export interface UserConnectionSubscription
   pageInfo: <T = PageInfoSubscription>() => T;
   edges: <T = Promise<AsyncIterator<UserEdgeSubscription>>>() => T;
   aggregate: <T = AggregateUserSubscription>() => T;
+}
+
+export interface UserPreviousValues {
+  id: ID_Output;
+  createdAt: DateTimeOutput;
+  updatedAt: DateTimeOutput;
+  email: String;
+  password: String;
+  role: UserRole;
+  firstName?: String;
+  lastName?: String;
+  phone?: String;
+}
+
+export interface UserPreviousValuesPromise
+  extends Promise<UserPreviousValues>,
+    Fragmentable {
+  id: () => Promise<ID_Output>;
+  createdAt: () => Promise<DateTimeOutput>;
+  updatedAt: () => Promise<DateTimeOutput>;
+  email: () => Promise<String>;
+  password: () => Promise<String>;
+  role: () => Promise<UserRole>;
+  firstName: () => Promise<String>;
+  lastName: () => Promise<String>;
+  phone: () => Promise<String>;
+}
+
+export interface UserPreviousValuesSubscription
+  extends Promise<AsyncIterator<UserPreviousValues>>,
+    Fragmentable {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  email: () => Promise<AsyncIterator<String>>;
+  password: () => Promise<AsyncIterator<String>>;
+  role: () => Promise<AsyncIterator<UserRole>>;
+  firstName: () => Promise<AsyncIterator<String>>;
+  lastName: () => Promise<AsyncIterator<String>>;
+  phone: () => Promise<AsyncIterator<String>>;
+}
+
+export interface AggregateUser {
+  count: Int;
+}
+
+export interface AggregateUserPromise
+  extends Promise<AggregateUser>,
+    Fragmentable {
+  count: () => Promise<Int>;
+}
+
+export interface AggregateUserSubscription
+  extends Promise<AsyncIterator<AggregateUser>>,
+    Fragmentable {
+  count: () => Promise<AsyncIterator<Int>>;
+}
+
+export interface PasswordMetaSubscriptionPayload {
+  mutation: MutationType;
+  node: PasswordMeta;
+  updatedFields: String[];
+  previousValues: PasswordMetaPreviousValues;
+}
+
+export interface PasswordMetaSubscriptionPayloadPromise
+  extends Promise<PasswordMetaSubscriptionPayload>,
+    Fragmentable {
+  mutation: () => Promise<MutationType>;
+  node: <T = PasswordMetaPromise>() => T;
+  updatedFields: () => Promise<String[]>;
+  previousValues: <T = PasswordMetaPreviousValuesPromise>() => T;
+}
+
+export interface PasswordMetaSubscriptionPayloadSubscription
+  extends Promise<AsyncIterator<PasswordMetaSubscriptionPayload>>,
+    Fragmentable {
+  mutation: () => Promise<AsyncIterator<MutationType>>;
+  node: <T = PasswordMetaSubscription>() => T;
+  updatedFields: () => Promise<AsyncIterator<String[]>>;
+  previousValues: <T = PasswordMetaPreviousValuesSubscription>() => T;
+}
+
+export interface PasswordMeta extends Node {
+  id: ID_Output;
+  createdAt: DateTimeOutput;
+  resetToken: String;
+}
+
+export interface PasswordMetaPromise
+  extends Promise<PasswordMeta>,
+    Fragmentable,
+    Node {
+  id: () => Promise<ID_Output>;
+  createdAt: () => Promise<DateTimeOutput>;
+  resetToken: () => Promise<String>;
+}
+
+export interface PasswordMetaSubscription
+  extends Promise<AsyncIterator<PasswordMeta>>,
+    Fragmentable,
+    Node {
+  id: () => Promise<AsyncIterator<ID_Output>>;
+  createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
+  resetToken: () => Promise<AsyncIterator<String>>;
 }
 
 /*
@@ -795,30 +837,10 @@ export interface PageInfoSubscription
   endCursor: () => Promise<AsyncIterator<String>>;
 }
 
-export interface PasswordMetaSubscriptionPayload {
-  mutation: MutationType;
-  node: PasswordMeta;
-  updatedFields: String[];
-  previousValues: PasswordMetaPreviousValues;
-}
-
-export interface PasswordMetaSubscriptionPayloadPromise
-  extends Promise<PasswordMetaSubscriptionPayload>,
-    Fragmentable {
-  mutation: () => Promise<MutationType>;
-  node: <T = PasswordMetaPromise>() => T;
-  updatedFields: () => Promise<String[]>;
-  previousValues: <T = PasswordMetaPreviousValuesPromise>() => T;
-}
-
-export interface PasswordMetaSubscriptionPayloadSubscription
-  extends Promise<AsyncIterator<PasswordMetaSubscriptionPayload>>,
-    Fragmentable {
-  mutation: () => Promise<AsyncIterator<MutationType>>;
-  node: <T = PasswordMetaSubscription>() => T;
-  updatedFields: () => Promise<AsyncIterator<String[]>>;
-  previousValues: <T = PasswordMetaPreviousValuesSubscription>() => T;
-}
+/*
+The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. 
+*/
+export type Int = number;
 
 /*
 The `Long` scalar type represents non-fractional signed whole numeric values.
@@ -833,11 +855,6 @@ export type ID_Input = string | number;
 export type ID_Output = string;
 
 /*
-The `Boolean` scalar type represents `true` or `false`.
-*/
-export type Boolean = boolean;
-
-/*
 DateTime scalar input type, allowing Date
 */
 export type DateTimeInput = Date | string;
@@ -848,9 +865,9 @@ DateTime scalar output type, which is always a string
 export type DateTimeOutput = string;
 
 /*
-The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. 
+The `Boolean` scalar type represents `true` or `false`.
 */
-export type Int = number;
+export type Boolean = boolean;
 
 /*
 The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
@@ -862,6 +879,10 @@ export type String = string;
  */
 
 export const models: Model[] = [
+  {
+    name: "UserRole",
+    embedded: false
+  },
   {
     name: "User",
     embedded: false
