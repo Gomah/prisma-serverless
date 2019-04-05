@@ -3,18 +3,22 @@ import { getUserId } from '../utils';
 import { User } from '../generated/prisma-client';
 
 const rules = {
-  isGuest: rule()(async () => true),
+  isGuest: rule()(async (): Promise<boolean> => true),
 
-  isUser: rule()(async (parent, args, context) => {
-    const userId = await getUserId(context);
-    return !!userId;
-  }),
+  isUser: rule()(
+    async (parent, args, context): Promise<boolean> => {
+      const userId = await getUserId(context);
+      return !!userId;
+    }
+  ),
 
-  isAdmin: rule({ cache: 'strict' })(async (parent, args, context, info) => {
-    const userId = await getUserId(context);
-    const user: User = await context.prisma.user({ id: userId });
-    return user.role === 'ADMIN';
-  }),
+  isAdmin: rule({ cache: 'strict' })(
+    async (parent, args, context): Promise<boolean> => {
+      const userId = await getUserId(context);
+      const user: User = await context.prisma.user({ id: userId });
+      return user.role === 'ADMIN';
+    }
+  ),
 };
 
 export const permissions = shield({

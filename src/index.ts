@@ -3,10 +3,12 @@ import * as path from 'path';
 import { ApolloServer } from 'apollo-server-lambda';
 import { applyMiddleware } from 'graphql-middleware';
 import { makePrismaSchema } from 'nexus-prisma';
+import { GraphQLSchema } from 'graphql';
 import datamodelInfo from './generated/nexus-prisma';
 import { permissions } from './permissions';
 import * as allTypes from './resolvers';
 import { Prisma, prisma } from './generated/prisma-client';
+import { Context } from './types';
 
 const prismaInstance = (): Prisma =>
   new Prisma({
@@ -15,7 +17,7 @@ const prismaInstance = (): Prisma =>
     secret: process.env.PRISMA_SECRET, // only needed if specified in `database/prisma.yml` (value set in `.env`)
   });
 
-const schema = applyMiddleware(
+const schema: GraphQLSchema = applyMiddleware(
   makePrismaSchema({
     // Provide all the GraphQL types we've implemented
     types: allTypes,
@@ -56,7 +58,7 @@ const schema = applyMiddleware(
 
 const server = new ApolloServer({
   schema,
-  context: req => ({
+  context: (req): Context => ({
     ...req,
     prisma: prismaInstance(),
   }),

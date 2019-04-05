@@ -32,6 +32,7 @@ module.exports = {
       {
         js: 'never',
         ts: 'never',
+        mjs: 'never',
         gql: 'never',
         graphql: 'never',
       },
@@ -48,7 +49,7 @@ module.exports = {
       webpack: {
         config: {
           resolve: {
-            extensions: ['.js', '.ts', '.gql', '.graphql'],
+            extensions: ['.js', '.ts', '.gql', 'mjs', '.graphql'],
             alias: {
               '@': __dirname + '/src',
             },

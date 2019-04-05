@@ -7,7 +7,7 @@ import { signup } from './account/signup';
 
 export const Mutation = prismaObjectType({
   name: 'Mutation',
-  definition: t => {
+  definition: (t): void => {
     t.prismaFields(['*']);
 
     t.field('signup', {

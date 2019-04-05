@@ -1,6 +1,6 @@
 import { prisma } from '../../src/generated/prisma-client';
 
-(async () => {
+(async (): Promise<void> => {
   await prisma.createUser({
     email: 'user@gomah.fr',
     role: 'USER',
