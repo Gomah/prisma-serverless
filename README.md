@@ -2,6 +2,15 @@
 
 > Template for Prisma (Nexus) + Typescript + AWS Serverless Lambda = :fireworks:
 
+This boilerplate includes:
+
+- :rocket: [Apollo Server Lambda](https://www.apollographql.com/docs/apollo-server/deployment/lambda)
+- :zap: [Serverless](https://serverless.com/) with Webpack & Typescript support
+- :alembic: [Prisma](https//prisma.io) & CRUD schema generated using [Nexus](https://nexus.js.org/)
+- :lock: Basic permissions with [graphql-shield](https://github.com/maticzav/graphql-shield)
+
+There's more to come :eyes:
+
 ## Table of contents
 
 - [Project Structure](#project-structure)
