@@ -1,5 +1,5 @@
 import { verify } from 'jsonwebtoken';
-import { Context } from './types';
+import { Ctx } from './types';
 
 interface Token {
   userId: string;
@@ -12,7 +12,7 @@ interface Token {
  *
  * @returns { void }
  */
-export function getUserId(context: Context): string {
+export function getUserId(context: Ctx): string {
   try {
     const { Authorization } = context.event.headers;
 

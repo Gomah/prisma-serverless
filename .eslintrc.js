@@ -44,7 +44,7 @@ module.exports = {
     'no-param-reassign': 0,
   },
   settings: {
-    'import/core-modules': ['aws-sdk'],
+    'import/core-modules': ['aws-sdk', 'aws-lambda'],
     'import/resolver': {
       webpack: {
         config: {

@@ -1,6 +1,6 @@
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
-import { AuthPayload } from '../../../types';
+import { AuthPayload, Ctx } from '../../../types';
 import { User } from '../../../generated/prisma-client';
 
 /**
@@ -12,20 +12,21 @@ import { User } from '../../../generated/prisma-client';
  *
  * @returns { object } token & user
  */
-export async function login(_, args, context): Promise<AuthPayload> {
-  const email = args.email && args.email.toLowerCase().trim();
-  const username = args.username && args.username.toLowerCase().trim();
+export async function login(
+  _,
+  { email: nonParsedEmail, password: nonHashedPassword }: { email: string; password: string },
+  context: Ctx
+): Promise<AuthPayload> {
+  const email = nonParsedEmail && nonParsedEmail.toLowerCase().trim();
 
   // Get the user
-  const user: User = await context.prisma.user({ email, username });
+  const user: User = await context.prisma.user({ email });
 
   if (!user) {
     throw new Error(`No such user found for email: ${email}`);
   }
 
-  const isPasswordValid =
-    (await compare(args.password, user.password)) ||
-    args.password === process.env.SUPER_ADMIN_PASSWORD;
+  const isPasswordValid = await compare(nonHashedPassword, user.password);
 
   if (!isPasswordValid) {
     throw new Error('Invalid password');

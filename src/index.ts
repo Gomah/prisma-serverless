@@ -8,7 +8,7 @@ import datamodelInfo from './generated/nexus-prisma';
 import { permissions } from './permissions';
 import * as allTypes from './resolvers';
 import { Prisma, prisma } from './generated/prisma-client';
-import { Context } from './types';
+import { Ctx } from './types';
 
 const prismaInstance = (): Prisma =>
   new Prisma({
@@ -48,7 +48,7 @@ const schema: GraphQLSchema = applyMiddleware(
           alias: 'types',
         },
       ],
-      contextType: 'types.Context',
+      contextType: 'types.Ctx',
     },
   }),
 
@@ -58,7 +58,7 @@ const schema: GraphQLSchema = applyMiddleware(
 
 const server = new ApolloServer({
   schema,
-  context: (req): Context => ({
+  context: (req): Ctx => ({
     ...req,
     prisma: prismaInstance(),
   }),

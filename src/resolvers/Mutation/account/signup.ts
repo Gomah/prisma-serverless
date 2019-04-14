@@ -1,6 +1,6 @@
 import { hash } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
-import { AuthPayload } from '../../../types';
+import { AuthPayload, Ctx } from '../../../types';
 
 /**
  * signup - Signup function
@@ -16,16 +16,14 @@ export async function signup(
   {
     firstName,
     lastName,
-    username: nonParsedUsername,
     phone,
     password: nonHashedPassword,
     email: nonParsedEmail,
-  },
-  context
+  }: { firstName?: string; lastName?: string; phone?: string; password: string; email: string },
+  context: Ctx
 ): Promise<AuthPayload> {
   const password = await hash(nonHashedPassword, 10);
   const email = nonParsedEmail.toLowerCase().trim();
-  const username = nonParsedUsername && nonParsedUsername.toLowerCase().trim();
 
   const isEmailAlreadyRegistered = await context.prisma.user({ email });
 
@@ -33,7 +31,7 @@ export async function signup(
     throw new Error(`Email already in use.`);
   }
 
-  const data = { firstName, lastName, username, email, phone, password };
+  const data = { firstName, lastName, email, phone, password };
   const user = await context.prisma.createUser(data);
 
   return { token: sign({ userId: user.id }, process.env.APP_SECRET), user };

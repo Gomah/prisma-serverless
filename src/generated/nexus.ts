@@ -510,7 +510,7 @@ export type NexusGenScalarNames = "Boolean" | "DateTime" | "Float" | "ID" | "Int
 export type NexusGenUnionNames = never;
 
 export interface NexusGenTypes {
-  context: types.Context;
+  context: types.Ctx;
   inputTypes: NexusGenInputs;
   rootTypes: NexusGenRootTypes;
   argTypes: NexusGenArgTypes;

@@ -1,9 +1,10 @@
+import { APIGatewayProxyEvent, Context } from 'aws-lambda';
 import { Prisma, User } from './generated/prisma-client';
 
-export interface Context {
+export interface Ctx {
   prisma: Prisma;
-  req: any;
-  event: any;
+  event: APIGatewayProxyEvent;
+  context: Context;
 }
 
 export interface AuthPayload {
