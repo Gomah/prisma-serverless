@@ -351,11 +351,13 @@ type PasswordMetaObject =
   | PasswordMetaFields
   | { name: 'id', args?: [] | false, alias?: string  } 
   | { name: 'createdAt', args?: [] | false, alias?: string  } 
+  | { name: 'updatedAt', args?: [] | false, alias?: string  } 
   | { name: 'resetToken', args?: [] | false, alias?: string  } 
 
 type PasswordMetaFields =
   | 'id'
   | 'createdAt'
+  | 'updatedAt'
   | 'resetToken'
 
 
@@ -372,6 +374,14 @@ export interface PasswordMetaFieldDetails {
     resolve: undefined
   }
   createdAt: {
+    type: 'DateTime'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  updatedAt: {
     type: 'DateTime'
     args: {}
     description: string
@@ -1250,11 +1260,13 @@ type PasswordMetaPreviousValuesObject =
   | PasswordMetaPreviousValuesFields
   | { name: 'id', args?: [] | false, alias?: string  } 
   | { name: 'createdAt', args?: [] | false, alias?: string  } 
+  | { name: 'updatedAt', args?: [] | false, alias?: string  } 
   | { name: 'resetToken', args?: [] | false, alias?: string  } 
 
 type PasswordMetaPreviousValuesFields =
   | 'id'
   | 'createdAt'
+  | 'updatedAt'
   | 'resetToken'
 
 
@@ -1271,6 +1283,14 @@ export interface PasswordMetaPreviousValuesFieldDetails {
     resolve: undefined
   }
   createdAt: {
+    type: 'DateTime'
+    args: {}
+    description: string
+    list: undefined
+    nullable: false
+    resolve: undefined
+  }
+  updatedAt: {
     type: 'DateTime'
     args: {}
     description: string
@@ -1543,6 +1563,14 @@ export interface PasswordMetaWhereInput {
   createdAt_lte?: string | null
   createdAt_gt?: string | null
   createdAt_gte?: string | null
+  updatedAt?: string | null
+  updatedAt_not?: string | null
+  updatedAt_in?: string[]
+  updatedAt_not_in?: string[]
+  updatedAt_lt?: string | null
+  updatedAt_lte?: string | null
+  updatedAt_gt?: string | null
+  updatedAt_gte?: string | null
   resetToken?: string | null
   resetToken_not?: string | null
   resetToken_in?: string[]
@@ -1585,6 +1613,14 @@ export type PasswordMetaWhereInputInputObject =
   | { name: 'createdAt_lte', alias?: string  } 
   | { name: 'createdAt_gt', alias?: string  } 
   | { name: 'createdAt_gte', alias?: string  } 
+  | { name: 'updatedAt', alias?: string  } 
+  | { name: 'updatedAt_not', alias?: string  } 
+  | { name: 'updatedAt_in', alias?: string  } 
+  | { name: 'updatedAt_not_in', alias?: string  } 
+  | { name: 'updatedAt_lt', alias?: string  } 
+  | { name: 'updatedAt_lte', alias?: string  } 
+  | { name: 'updatedAt_gt', alias?: string  } 
+  | { name: 'updatedAt_gte', alias?: string  } 
   | { name: 'resetToken', alias?: string  } 
   | { name: 'resetToken_not', alias?: string  } 
   | { name: 'resetToken_in', alias?: string  } 
@@ -1800,10 +1836,10 @@ export type PasswordMetaOrderByInputValues =
   | 'id_DESC'
   | 'createdAt_ASC'
   | 'createdAt_DESC'
-  | 'resetToken_ASC'
-  | 'resetToken_DESC'
   | 'updatedAt_ASC'
   | 'updatedAt_DESC'
+  | 'resetToken_ASC'
+  | 'resetToken_DESC'
   
 export type MutationTypeValues =
   | 'CREATED'

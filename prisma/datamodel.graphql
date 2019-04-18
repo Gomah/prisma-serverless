@@ -4,16 +4,16 @@ enum UserRole {
 }
 
 type User {
-  id: ID! @unique
-  createdAt: DateTime!
-  updatedAt: DateTime!
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
 
   # Credentials
   email: String! @unique
   password: String!
 
   # Role
-  role: UserRole! @default(value: "USER")
+  role: UserRole! @default(value: USER)
 
   # Details
   firstName: String
@@ -25,7 +25,8 @@ type User {
 }
 
 type PasswordMeta {
-  id: ID! @unique
-  createdAt: DateTime!
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
   resetToken: String!
 }
