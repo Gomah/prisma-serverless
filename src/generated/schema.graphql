@@ -51,6 +51,7 @@ type PasswordMeta {
   createdAt: DateTime!
   id: ID!
   resetToken: String!
+  updatedAt: DateTime!
 }
 
 type PasswordMetaConnection {
@@ -150,6 +151,14 @@ input PasswordMetaWhereInput {
   resetToken_not_in: [String!]
   resetToken_not_starts_with: String
   resetToken_starts_with: String
+  updatedAt: DateTime
+  updatedAt_gt: DateTime
+  updatedAt_gte: DateTime
+  updatedAt_in: [DateTime!]
+  updatedAt_lt: DateTime
+  updatedAt_lte: DateTime
+  updatedAt_not: DateTime
+  updatedAt_not_in: [DateTime!]
 }
 
 input PasswordMetaWhereUniqueInput {

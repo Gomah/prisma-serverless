@@ -79,6 +79,14 @@ export interface NexusGenInputs {
     resetToken_not_in?: string[] | null; // [String!]
     resetToken_not_starts_with?: string | null; // String
     resetToken_starts_with?: string | null; // String
+    updatedAt?: any | null; // DateTime
+    updatedAt_gt?: any | null; // DateTime
+    updatedAt_gte?: any | null; // DateTime
+    updatedAt_in?: any[] | null; // [DateTime!]
+    updatedAt_lt?: any | null; // DateTime
+    updatedAt_lte?: any | null; // DateTime
+    updatedAt_not?: any | null; // DateTime
+    updatedAt_not_in?: any[] | null; // [DateTime!]
   }
   PasswordMetaWhereUniqueInput: { // input type
     id?: string | null; // ID
@@ -253,6 +261,7 @@ export interface NexusGenRootTypes {
     createdAt: any; // DateTime!
     id: string; // ID!
     resetToken: string; // String!
+    updatedAt: any; // DateTime!
   }
   PasswordMetaConnection: { // root type
     edges: NexusGenRootTypes['PasswordMetaEdge'][]; // [PasswordMetaEdge!]!
@@ -348,6 +357,7 @@ export interface NexusGenFieldTypes {
     createdAt: any; // DateTime!
     id: string; // ID!
     resetToken: string; // String!
+    updatedAt: any; // DateTime!
   }
   PasswordMetaConnection: { // field return type
     aggregate: NexusGenRootTypes['AggregatePasswordMeta']; // AggregatePasswordMeta!
