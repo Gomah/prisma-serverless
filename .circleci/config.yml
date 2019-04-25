@@ -1,0 +1,46 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.10.0
+    steps:
+      - checkout
+      - run: yarn
+  test:
+    docker:
+      - image: circleci/node:8.10.0
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn test
+  staging:
+    docker:
+      - image: circleci/node:8.10.0
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn deploy:dev
+  production:
+    docker:
+      - image: circleci/node:8.10.0
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn deploy:prod
+workflows:
+  version: 2
+  deploy_code:
+    jobs:
+      - test
+      - staging:
+          requires:
+            - test
+          filters:
+            branches:
+              only: develop
+      - production:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
