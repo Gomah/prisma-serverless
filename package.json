@@ -22,16 +22,16 @@
     "test:lint"
   ],
   "resolutions": {
-    "graphql": "14.2.1"
+    "graphql": "14.3.0"
   },
   "dependencies": {
-    "apollo-server-lambda": "^2.4.8",
+    "apollo-server-lambda": "^2.5.0",
     "aws-sdk": "^2.290.0",
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "dotenv": "^8.0.0",
-    "graphql": "^14.2.1",
+    "graphql": "^14.3.0",
     "graphql-import": "^0.7.1",
     "graphql-middleware": "^3.0.2",
     "graphql-shield": "^5.3.5",
@@ -74,15 +74,15 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
     "prisma": "^1.32.2",
-    "serverless": "^1.41.1",
-    "serverless-dotenv-plugin": "^2.0.1",
+    "serverless": "^1.42.1",
+    "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^4.10.0",
     "serverless-webpack": "^5.3.0",
     "ts-loader": "^6.0.0",
     "ts-node": "^8.1.0",
-    "ts-node-dev": "^1.0.0-pre.35",
+    "ts-node-dev": "^1.0.0-pre.39",
     "typescript": "^3.4.5",
-    "webpack": "^4.30.0",
+    "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2",
     "webpack-node-externals": "^1.7.2"
   }
