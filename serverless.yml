@@ -19,7 +19,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs10.x
   cfLogs: true
   region: ap-southeast-2
   environment: ${file(./config/env.yml)}
