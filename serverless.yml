@@ -5,10 +5,14 @@ plugins:
   - serverless-dotenv-plugin
   - serverless-offline
   - serverless-webpack
+  - serverless-prune-plugin
 
 # Enable auto-packing of external modules
 custom:
   stage: ${opt:stage}
+  prune:
+    automatic: true
+    number: 5
   serverless-offline:
     port: 1337
   webpack:
