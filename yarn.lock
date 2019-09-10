@@ -2374,40 +2374,10 @@ aws-lambda@^0.1.2:
     commander "^2.5.0"
     dotenv "^0.4.0"
 
-aws-sdk@2.485.0:
-  version "2.485.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.485.0.tgz#4c34791f9660e476cf55ac8bcb334105673c783f"
-  integrity sha512-VTmsIPrf9yblghjM5P7hCUG9ysYB+m67mo6/laWeJeGWLxePwtfvVAjhmmXkOJIv0JFSwNfJJ5KpI3Mtu0avsQ==
-  dependencies:
-    buffer "4.9.1"
-    events "1.1.1"
-    ieee754 "1.1.8"
-    jmespath "0.15.0"
-    querystring "0.2.0"
-    sax "1.2.1"
-    url "0.10.3"
-    uuid "3.3.2"
-    xml2js "0.4.19"
-
-aws-sdk@^*:
-  version "2.465.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.465.0.tgz#60948a0930473f50bac23311bc48426118e79f12"
-  integrity sha512-eS3g80QUbhOo0Rd/WTudtlc4cuNpLget6Re1KyDod6319QvW2il1q28VyvZK0/Yiu8GyVh5xGbThaLEQem+fLQ==
-  dependencies:
-    buffer "4.9.1"
-    events "1.1.1"
-    ieee754 "1.1.8"
-    jmespath "0.15.0"
-    querystring "0.2.0"
-    sax "1.2.1"
-    url "0.10.3"
-    uuid "3.3.2"
-    xml2js "0.4.19"
-
-aws-sdk@^2.518.0:
-  version "2.520.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.520.0.tgz#6d3ff7784617b477f283857e49667d190d51a550"
-  integrity sha512-I0BnCLyoqJ17bW48LYMpBcyhSpMW+c+H0GPnFoB7T8Xi2uype3sNV+4qzmHMVhVYv+2Xba9CMenyiH6qeYSwvQ==
+aws-sdk@2.525.0, aws-sdk@^*, aws-sdk@^2.518.0:
+  version "2.525.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.525.0.tgz#220da4ff859947bac9b2d391cae5a459fef3989e"
+  integrity sha512-UgigVfY4ayrffOMbybyz3F1bbIpEhuiO4yfYXultBC1LfIhZaFSFWLqzEBnm9srhydJhfLDftkL0WXVJtfJ4ng==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
