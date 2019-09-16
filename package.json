@@ -78,7 +78,7 @@
     "ts-node": "^8.3.0",
     "ts-node-dev": "^1.0.0-pre.42",
     "typescript": "3.4.5",
-    "webpack": "^4.39.3",
+    "webpack": "^4.40.2",
     "webpack-cli": "^3.3.8",
     "webpack-node-externals": "^1.7.2"
   }
