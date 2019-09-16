@@ -71,7 +71,7 @@
     "prisma": "^1.34.8",
     "serverless": "^1.52.0",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^5.10.1",
+    "serverless-offline": "^5.11.0",
     "serverless-prune-plugin": "^1.4.1",
     "serverless-webpack": "^5.3.1",
     "ts-loader": "^6.1.0",
