@@ -1200,10 +1200,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/aws-lambda@^8.10.31", "@types/aws-lambda@^8.10.32":
-  version "8.10.32"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.32.tgz#6dfc620129cfc8fe012c86cea9e9a97ca35d4e18"
-  integrity sha512-EOF/Wxfwt56YNAIl9qxal4VKIouiaBPpZympEF194cIXm7LwIyZwY77a2Al/77Un62cD78thapAsbmf1pLgfBQ==
+"@types/aws-lambda@^8.10.31", "@types/aws-lambda@^8.10.33":
+  version "8.10.33"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.33.tgz#64ad8f2e785e5c2cf86dc2d596c9a0b2e2e14ab5"
+  integrity sha512-BZ8lPY/vyUq+Bid/BgYrKbUF36SZYuGOAMgOq/VgqnTQnCn9GBo3HejKZ6xrUzA8zLf9Pjs707amkt4f7rWujw==
 
 "@types/bcryptjs@^2.4.2":
   version "2.4.2"
