@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.2",
+    "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
     "@hapi/address": "^2.1.2",
     "@types/aws-lambda": "^8.10.33",
