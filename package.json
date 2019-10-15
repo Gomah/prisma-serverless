@@ -51,7 +51,7 @@
     "@types/node": "^12.7.12",
     "@types/ws": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
-    "@typescript-eslint/parser": "^2.3.3",
+    "@typescript-eslint/parser": "^2.4.0",
     "aws-lambda": "^0.1.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
