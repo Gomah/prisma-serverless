@@ -708,10 +708,15 @@
     "@hapi/boom" "7.x.x"
     "@hapi/hoek" "6.x.x"
 
-"@hapi/address@2.x.x", "@hapi/address@^2.1.2":
+"@hapi/address@2.x.x":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.2.tgz#1c794cd6dbf2354d1eb1ef10e0303f573e1c7222"
   integrity sha512-O4QDrx+JoGKZc6aN64L04vqa7e41tIiLU+OvKdcYaEMP97UttL0f9GIi9/0A4WAMx0uBd6SidDIhktZhgOcN8Q==
+
+"@hapi/address@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@hapi/address/-/address-3.1.0.tgz#bf13ea61cac37bfa12542af501b5ccd389d1a37d"
+  integrity sha512-N8lbA1Lm2iaIYoUZZnemO7/ZYVdPhruYvyiFDO796sUorkQDpEdREYXe9s4jd6uk2Rho1MJJHcZzy7MHYZt+oA==
 
 "@hapi/ammo@3.x.x":
   version "3.1.0"
