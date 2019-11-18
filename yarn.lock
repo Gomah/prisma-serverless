@@ -798,10 +798,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.2.tgz#1c794cd6dbf2354d1eb1ef10e0303f573e1c7222"
   integrity sha512-O4QDrx+JoGKZc6aN64L04vqa7e41tIiLU+OvKdcYaEMP97UttL0f9GIi9/0A4WAMx0uBd6SidDIhktZhgOcN8Q==
 
-"@hapi/address@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@hapi/address/-/address-3.2.0.tgz#12ea4c053319c33866a8a28f7fbc38b58d5901b2"
-  integrity sha512-ExoGpTc+a1pTNY0WAcNl9kWCKOIp0aRPg/OKq/UGuAGY58kyT3TYjozEDs63AAPZmP0xIw9G8ttriTPlIapd1g==
+"@hapi/address@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@hapi/address/-/address-3.2.2.tgz#b3511e4af42553be0957a2b93f8018526cc0c8ca"
+  integrity sha512-P29u4UoqZIFXw5vV43p7ciu/6+6OVINXOtHR4Q5xiufiZisVJXlckovN+l6wD/g9RQyhcztSg3viyLIoDlaTvg==
   dependencies:
     "@hapi/hoek" "^8.4.0"
 
@@ -944,12 +944,7 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-7.1.0.tgz#0031ea68e5b925536b6c52b7e758686265755c67"
   integrity sha512-jBTPzWrWQAizq7naLVwU+P2+TzVY3ZtPSX+F9gwW23ihwpihpYKvjN21zHKUjaePYS9ijlDF3oFVNbGfhbbk2w==
 
-"@hapi/hoek@8.x.x":
-  version "8.2.4"
-  resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.2.4.tgz#684a14f4ca35d46f44abc87dfc696e5e4fe8a020"
-  integrity sha512-Ze5SDNt325yZvNO7s5C4fXDscjJ6dcqLFXJQ/M7dZRQCewuDj2iDUuBi6jLQt+APbW9RjjVEvLr35FXuOEqjow==
-
-"@hapi/hoek@^8.4.0":
+"@hapi/hoek@8.x.x", "@hapi/hoek@^8.4.0":
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-8.5.0.tgz#2f9ce301c8898e1c3248b0a8564696b24d1a9a5a"
   integrity sha512-7XYT10CZfPsH7j9F1Jmg1+d0ezOux2oM2GfArAzLwWe4mE2Dr3hVjsAL6+TFY49RRJlCdJDMw3nJsLFroTc8Kw==

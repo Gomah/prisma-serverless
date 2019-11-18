@@ -43,7 +43,7 @@
     "@babel/core": "^7.7.2",
     "@babel/node": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
-    "@hapi/address": "^3.2.0",
+    "@hapi/address": "^3.2.2",
     "@types/aws-lambda": "^8.10.35",
     "@types/bcryptjs": "^2.4.2",
     "@types/dotenv": "^8.2.0",
