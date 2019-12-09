@@ -44,7 +44,7 @@
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@hapi/address": "^3.2.2",
-    "@types/aws-lambda": "^8.10.36",
+    "@types/aws-lambda": "^8.10.37",
     "@types/bcryptjs": "^2.4.2",
     "@types/dotenv": "^8.2.0",
     "@types/jsonwebtoken": "^8.3.5",
