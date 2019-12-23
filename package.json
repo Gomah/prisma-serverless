@@ -42,7 +42,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/node": "^7.7.7",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
     "@hapi/address": "^3.2.2",
     "@types/aws-lambda": "^8.10.39",
     "@types/bcryptjs": "^2.4.2",
