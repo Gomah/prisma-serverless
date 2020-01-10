@@ -25,7 +25,7 @@
     "graphql": "14.5.8"
   },
   "dependencies": {
-    "apollo-server-lambda": "^2.9.15",
+    "apollo-server-lambda": "^2.9.16",
     "aws-sdk": "2.485.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
@@ -48,7 +48,7 @@
     "@types/bcryptjs": "^2.4.2",
     "@types/dotenv": "^8.2.0",
     "@types/jsonwebtoken": "^8.3.5",
-    "@types/node": "^13.1.4",
+    "@types/node": "^13.1.6",
     "@types/ws": "^6.0.4",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
@@ -76,9 +76,9 @@
     "serverless-prune-plugin": "^1.4.1",
     "serverless-webpack": "^5.3.1",
     "ts-loader": "^6.2.1",
-    "ts-node": "^8.5.4",
+    "ts-node": "^8.6.0",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "3.4.5",
+    "typescript": "3.7.4",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-node-externals": "^1.7.2"

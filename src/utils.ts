@@ -23,7 +23,7 @@ export function getUserId(context: Ctx): string {
     const token = Authorization.replace('Bearer ', '');
     const verifiedToken = verify(token, process.env.APP_SECRET) as Token;
 
-    return verifiedToken && verifiedToken.userId;
+    return verifiedToken?.userId;
   } catch (error) {
     throw new Error('Not authorized');
   }

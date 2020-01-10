@@ -17,7 +17,7 @@ export async function login(
   { email: nonParsedEmail, password: nonHashedPassword }: { email: string; password: string },
   context: Ctx
 ): Promise<AuthPayload> {
-  const email = nonParsedEmail && nonParsedEmail.toLowerCase().trim();
+  const email = nonParsedEmail?.toLowerCase().trim();
 
   // Get the user
   const user: User = await context.prisma.user({ email });
