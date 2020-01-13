@@ -339,13 +339,13 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/node@^7.7.7":
-  version "7.7.7"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.7.7.tgz#10c488ca36da07670be0131679c4e22f9d7795d4"
-  integrity sha512-QWWbQ6AyDffz6mA2mF0jixb/3IyRlqWgz5JNa2F6kSYe4vhPEytwuGmanx0NQJxBufDjffm/jYPuIfKfAyVzuA==
+"@babel/node@^7.8.0":
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.8.0.tgz#5398ab0a3ad9912c10400bdccc56d46acd7c515f"
+  integrity sha512-1foyevW7OivS9hEtc30KKUstiznyPkaTFojELc37qG4W33IDA6JbDdXs3zZLVu4uehzgmiPXwtaUEasI8SmALA==
   dependencies:
-    "@babel/register" "^7.7.7"
-    commander "^2.8.1"
+    "@babel/register" "^7.8.0"
+    commander "^4.0.1"
     core-js "^3.2.1"
     lodash "^4.17.13"
     node-environment-flags "^1.0.5"
@@ -792,10 +792,10 @@
     levenary "^1.1.0"
     semver "^5.5.0"
 
-"@babel/register@^7.7.7":
-  version "7.7.7"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.7.7.tgz#46910c4d1926b9c6096421b23d1f9e159c1dcee1"
-  integrity sha512-S2mv9a5dc2pcpg/ConlKZx/6wXaEwHeqfo7x/QbXsdCAZm+WJC1ekVvL1TVxNsedTs5y/gG63MhJTEsmwmjtiA==
+"@babel/register@^7.8.0":
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.8.0.tgz#a6515b7daab31209c584f2919702b1dcb6264105"
+  integrity sha512-i7CPQBzb/uALrZZozm6jXpSoieZvcTSOqonKA9UX4OLEvAYc4Y2VqgW67ZkSz6xfaNP6m1g1oBy0/zMA7YcdJA==
   dependencies:
     find-cache-dir "^2.0.0"
     lodash "^4.17.13"
@@ -3390,7 +3390,7 @@ commander@2.19.x:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
   integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
 
-commander@^2.11.0, commander@^2.19.0, commander@^2.20.0, commander@^2.7.1, commander@^2.8.1, commander@^2.9.0:
+commander@^2.11.0, commander@^2.19.0, commander@^2.20.0, commander@^2.7.1, commander@^2.9.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
@@ -3399,6 +3399,11 @@ commander@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/commander/-/commander-3.0.2.tgz#6837c3fb677ad9933d1cfba42dd14d5117d6b39e"
   integrity sha512-Gar0ASD4BDyKC4hl4DwHqDrmvjoxWKZigVnAbn5H1owvm4CxCPdb0HQDehwNYMJpla5+M2tPmPARzhtYuwpHow==
+
+commander@^4.0.1:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.0.tgz#545983a0603fe425bc672d66c9e3c89c42121a83"
+  integrity sha512-NIQrwvv9V39FHgGFm36+U9SMQzbiHvU79k+iADraJTpmrFFfx7Ds0IvDoAdZsDrknlkRk14OYoWXb57uTh7/sw==
 
 commander@~2.8.1:
   version "2.8.1"
