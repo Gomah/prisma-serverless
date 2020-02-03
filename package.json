@@ -71,7 +71,7 @@
     "prettier": "^1.19.1",
     "prisma": "^1.34.10",
     "serverless": "^1.62.0",
-    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-dotenv-plugin": "^2.3.1",
     "serverless-offline": "^5.12.1",
     "serverless-prune-plugin": "^1.4.1",
     "serverless-webpack": "^5.3.1",

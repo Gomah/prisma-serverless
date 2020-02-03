@@ -9835,10 +9835,10 @@ serve-static@1.14.1:
     parseurl "~1.3.3"
     send "0.17.1"
 
-serverless-dotenv-plugin@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/serverless-dotenv-plugin/-/serverless-dotenv-plugin-2.1.1.tgz#73f4638f71811a065ee51e2b363f2157327afabc"
-  integrity sha512-T08fI0XoWGMKfs1KEpYrFwG/6A+qR2UZyANgchV7jJAhRhCtO0my1oMTLovyone5UHXOwTojrwUw3pm8NYa3rg==
+serverless-dotenv-plugin@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/serverless-dotenv-plugin/-/serverless-dotenv-plugin-2.3.1.tgz#788de5e117b22e7268403fc7f8aaf46c97219179"
+  integrity sha512-ww4OiiMgs/QoMAVRk0afOHSK6CZUmso8xZzy+kh/VAprxGROJdNeWSPG8NXBqQbih/BL9HGJtg6ye+MdCLltdQ==
   dependencies:
     chalk "^2.1.0"
     dotenv "^4.0.0"
