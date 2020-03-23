@@ -30,7 +30,7 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "graphql": "^14.6.0",
-    "graphql-import": "^0.7.1",
+    "graphql-import": "^1.0.1",
     "graphql-middleware": "^4.0.2",
     "graphql-shield": "^7.2.1",
     "graphql-tools": "^4.0.7",
