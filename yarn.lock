@@ -10870,10 +10870,10 @@ serverless-dotenv-plugin@^2.3.2:
     dotenv "^8.2.0"
     dotenv-expand "^5.1.0"
 
-serverless-offline@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-6.0.0.tgz#edc168f3292e225d0b2c1ed678c1996738f43d10"
-  integrity sha512-JtFOq747LPJgHmvB+TtWVycKvE0eBHu6r8uWS3dL19WQJsiow6CfSn4x21pdhfOLC2pLDcb4X0kQJbA+HVzSMg==
+serverless-offline@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-6.1.2.tgz#1c0705adffe1a3868945a9fb2aec56362c0cec34"
+  integrity sha512-uPphAkEWivs6wdSwS2AFmqW0wTy2CU5vlE9Q0GJI4bjheeormasEw40dDWBnODufGPEI8JcKmh2tlnzxkLj/7Q==
   dependencies:
     "@hapi/boom" "^7.4.11"
     "@hapi/h2o2" "^8.3.2"
