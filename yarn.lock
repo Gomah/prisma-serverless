@@ -6751,14 +6751,14 @@ graphql-schema-linter@0.2.1:
     glob "^7.1.2"
     graphql "^14.0.0"
 
-graphql-shield@^7.2.5:
-  version "7.2.5"
-  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-7.2.5.tgz#b54008cba0cc5e5613b86e212b03bb710d37d51e"
-  integrity sha512-te8YDo96MTmmRD8d0aYQY+vomO5m/fdNabNriPpqnT2NI5R4sgSEj8x0cap8Y/ZrHgCwWHnGvNuGEdpzZZqVRA==
+graphql-shield@^7.2.6:
+  version "7.2.6"
+  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-7.2.6.tgz#f11107ed122c1882cb8062d55ed3c3acffcdbc17"
+  integrity sha512-XTGd+l0Ah3JzJp/jBFpluGZTmlcM8y09WxVR0w74DuQoFdr7W58j9cNvFudJIET5uBSaCVd7pUPYtep26SltsQ==
   dependencies:
     "@types/yup" "0.26.37"
     object-hash "^2.0.3"
-    yup "^0.28.3"
+    yup "^0.28.4"
 
 graphql-static-binding@0.9.3:
   version "0.9.3"
@@ -13592,10 +13592,10 @@ yn@^2.0.0:
   resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
   integrity sha1-5a2ryKz0CPY4X8dklWhMiOavaJo=
 
-yup@^0.28.3:
-  version "0.28.3"
-  resolved "https://registry.yarnpkg.com/yup/-/yup-0.28.3.tgz#1ca607405a8adf24a5ac51f54bd09d527555f0ba"
-  integrity sha512-amVkCgFWe5bGjrrUiODkbIzrSwtB8JpZrQYSrfj2YsbRdrV+tn9LquWdZDlfOx2HXyfEA8FGnlwidE/bFDxO7Q==
+yup@^0.28.4:
+  version "0.28.4"
+  resolved "https://registry.yarnpkg.com/yup/-/yup-0.28.4.tgz#e8f0038df8260f26e90e2cf5c061eed193f94a74"
+  integrity sha512-mcIe+Oz/uEbbp+YgPY3udg22msRP6Ntm7l0LWov9FExRHvZMwwppPSK1ygRXtblu/tYBq3N+tonundeeY+sFJw==
   dependencies:
     "@babel/runtime" "^7.8.7"
     fn-name "~3.0.0"
