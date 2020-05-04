@@ -75,7 +75,7 @@
     "serverless-offline": "^6.1.4",
     "serverless-prune-plugin": "^1.4.2",
     "serverless-webpack": "^5.3.1",
-    "ts-loader": "^7.0.1",
+    "ts-loader": "^7.0.2",
     "ts-node": "^8.10.1",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "3.8.3",
