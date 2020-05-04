@@ -50,7 +50,7 @@
     "@types/jsonwebtoken": "^8.3.9",
     "@types/node": "^13.13.4",
     "@types/ws": "^7.2.4",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.30.0",
     "aws-lambda": "^1.0.5",
     "babel-loader": "^8.1.0",
