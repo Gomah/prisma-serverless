@@ -11588,10 +11588,10 @@ serverless-offline@^6.1.4:
     velocityjs "^2.0.0"
     ws "^7.2.1"
 
-serverless-prune-plugin@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/serverless-prune-plugin/-/serverless-prune-plugin-1.4.2.tgz#785ae3f90fe2f505078c5d1663a2724bd2b64833"
-  integrity sha512-GHyvmKjWDPLts2jIFujiT5cxuNp1tD9HxC3WQCxeZWP0yqb7O3zJYJcEP/wWpH87QfUZGbirzrzOQbzunDN77w==
+serverless-prune-plugin@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/serverless-prune-plugin/-/serverless-prune-plugin-1.4.3.tgz#556d76a86e37bf57d4ccd8449a7d98b6496bd5ed"
+  integrity sha512-gsZF3oLs5rFdp6ynjiWf5cuXZ4DZrAhxRd5Zf2gfH/43kPqtZMZzUqcGYbHh1OXbOzogdn8fEg5d4Q3xxWwRBA==
   dependencies:
     bluebird "^3.4.7"
 
