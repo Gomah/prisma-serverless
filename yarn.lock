@@ -12061,10 +12061,10 @@ serverless-dotenv-plugin@^2.4.2:
     dotenv "^8.2.0"
     dotenv-expand "^5.1.0"
 
-serverless-offline@^6.1.7:
-  version "6.1.7"
-  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-6.1.7.tgz#cc47b238b438e0cd36109500cc51e39458abc58d"
-  integrity sha512-g0SJxjKDbsdwrMfrKYcTUHpQ95qAlXV70g+W8gPYD6vQUE/nBiOz/4Lr4slnQCiB868eX0Ryt+bOc5l/xxSUcg==
+serverless-offline@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-6.3.0.tgz#b323204a9f39b7fdf04f82f204feb49c8e22d53f"
+  integrity sha512-WhMOh+uwMxZQ4VpwDOTUj8W1Ik1w9TFespOss6Nh3+KBZJeJrMORDdb+ik4OILyp46HyvcfG/m27T+LLC47vxg==
   dependencies:
     "@hapi/boom" "^7.4.11"
     "@hapi/h2o2" "^8.3.2"
