@@ -25,7 +25,7 @@
     "graphql": "15.0.0"
   },
   "dependencies": {
-    "apollo-server-lambda": "^2.13.1",
+    "apollo-server-lambda": "^2.14.1",
     "aws-sdk": "2.485.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
