@@ -8399,6 +8399,11 @@ iterall@^1.1.3, iterall@^1.2.1, iterall@^1.3.0:
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.3.0.tgz#afcb08492e2915cbd8a0884eb93a8c94d0d72fea"
   integrity sha512-QZ9qOMdF+QLHxy1QIpUHUU1D5pS2CG2P69LF6L6CPjPYA/XMOmKV3PZpawHoAjHNyB0swdVTRxdYT4tbBbxqwg==
 
+java-invoke-local@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/java-invoke-local/-/java-invoke-local-0.0.6.tgz#0e04b20b5e306a1e8384846a9ac286790ee6d868"
+  integrity sha512-gZmQKe1QrfkkMjCn8Qv9cpyJFyogTYqkP5WCobX5RNaHsJzIV/6NvAnlnouOcwKr29QrxLGDGcqYuJ+ae98s1A==
+
 jmespath@0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
@@ -12095,10 +12100,10 @@ serverless-dotenv-plugin@^2.4.2:
     dotenv "^8.2.0"
     dotenv-expand "^5.1.0"
 
-serverless-offline@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-6.3.0.tgz#b323204a9f39b7fdf04f82f204feb49c8e22d53f"
-  integrity sha512-WhMOh+uwMxZQ4VpwDOTUj8W1Ik1w9TFespOss6Nh3+KBZJeJrMORDdb+ik4OILyp46HyvcfG/m27T+LLC47vxg==
+serverless-offline@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-6.4.0.tgz#45d685ed1fce88bcfcaff93f876c17316be99d80"
+  integrity sha512-7lKvomXG7zOn+UZiL/rqnQcHziObc/NUaz70UD0RFWe9pgBfB5LCOVWKaZI5O/owjwZYaAbN2P6GXjfjpMS5UQ==
   dependencies:
     "@hapi/boom" "^7.4.11"
     "@hapi/h2o2" "^8.3.2"
@@ -12109,6 +12114,7 @@ serverless-offline@^6.3.0:
     execa "^4.0.0"
     extend "^3.0.2"
     fs-extra "^8.1.0"
+    java-invoke-local "0.0.6"
     js-string-escape "^1.0.1"
     jsonpath-plus "^3.0.0"
     jsonwebtoken "^8.5.1"
