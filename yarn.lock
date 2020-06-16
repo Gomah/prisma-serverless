@@ -937,7 +937,7 @@
     pirates "^4.0.0"
     source-map-support "^0.5.16"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
   version "7.10.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
   integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
@@ -2346,10 +2346,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/yup@0.28.3":
-  version "0.28.3"
-  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.28.3.tgz#387c35f9a6a36b8d3561f6601eb4e72518b92899"
-  integrity sha512-0Sir2LxOmupF8HBUvpJoZghLmOqKfZsBk1GYlMwSIccLDDUoN04LHvo0KzDp9qxt1IKf9Fudpj35SrJ8VqetkQ==
+"@types/yup@0.29.3":
+  version "0.29.3"
+  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.29.3.tgz#5a85024796bffe0eb01601bfc180fe218356dba4"
+  integrity sha512-XxZFKnxzTfm+DR8MMBA35UUXfUPmjPpi8HJ90VZg7q/LIbtiOhVGJ26gNnATcflcpnIyf2Qm9A+oEhswaqoDpA==
 
 "@typescript-eslint/eslint-plugin@^2.34.0":
   version "2.34.0"
@@ -7392,14 +7392,14 @@ graphql-schema-linter@0.2.1:
     glob "^7.1.2"
     graphql "^14.0.0"
 
-graphql-shield@^7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-7.3.0.tgz#d43510a37623bcf6b722cfbad5c84c0d62185b8a"
-  integrity sha512-8zg37zMXNXxPnSfSOJudDlqh2PQfmaBDqr/ztfB4R9H1u+WU6rihzoBNHzr+kzH/16SBSgp2FWqSleuVNwtVZA==
+graphql-shield@^7.3.2:
+  version "7.3.2"
+  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-7.3.2.tgz#ecb8e2f2533a7dc5c1a67d79a928807014c9fa0d"
+  integrity sha512-LxFgVqY6hYa1mAO8BvRyS3vk9XkZsOOrpHrM35/wMNXqhF0pnJbdF788KSqMcxvdAL/dQYcTRhE8Mjgj7nacpQ==
   dependencies:
-    "@types/yup" "0.28.3"
+    "@types/yup" "0.29.3"
     object-hash "^2.0.3"
-    yup "^0.28.4"
+    yup "^0.29.0"
 
 graphql-static-binding@0.9.3:
   version "0.9.3"
@@ -11313,7 +11313,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-property-expr@^2.0.0:
+property-expr@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/property-expr/-/property-expr-2.0.2.tgz#fff2a43919135553a3bc2fdd94bdb841965b2330"
   integrity sha512-bc/5ggaYZxNkFKj374aLbEDqVADdYaLcFo8XBkishUWbaAdjlphaBFns9TvRA2pUseVL/wMFmui9X3IdNDU37g==
@@ -14538,16 +14538,16 @@ yn@3.1.1:
   resolved "https://registry.yarnpkg.com/yn/-/yn-3.1.1.tgz#1e87401a09d767c1d5eab26a6e4c185182d2eb50"
   integrity sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 
-yup@^0.28.4:
-  version "0.28.4"
-  resolved "https://registry.yarnpkg.com/yup/-/yup-0.28.4.tgz#e8f0038df8260f26e90e2cf5c061eed193f94a74"
-  integrity sha512-mcIe+Oz/uEbbp+YgPY3udg22msRP6Ntm7l0LWov9FExRHvZMwwppPSK1ygRXtblu/tYBq3N+tonundeeY+sFJw==
+yup@^0.29.0:
+  version "0.29.1"
+  resolved "https://registry.yarnpkg.com/yup/-/yup-0.29.1.tgz#35d25aab470a0c3950f66040ba0ff4b1b6efe0d9"
+  integrity sha512-U7mPIbgfQWI6M3hZCJdGFrr+U0laG28FxMAKIgNvgl7OtyYuUoc4uy9qCWYHZjh49b8T7Ug8NNDdiMIEytcXrQ==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.6"
     fn-name "~3.0.0"
     lodash "^4.17.15"
     lodash-es "^4.17.11"
-    property-expr "^2.0.0"
+    property-expr "^2.0.2"
     synchronous-promise "^2.0.10"
     toposort "^2.0.2"
 
