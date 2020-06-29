@@ -22,14 +22,14 @@
     "test:lint"
   ],
   "resolutions": {
-    "graphql": "15.1.0"
+    "graphql": "15.2.0"
   },
   "dependencies": {
     "apollo-server-lambda": "^2.15.0",
     "aws-sdk": "2.485.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
-    "graphql": "^15.1.0",
+    "graphql": "^15.2.0",
     "graphql-import": "^1.0.2",
     "graphql-middleware": "^4.0.2",
     "graphql-shield": "^7.3.2",
