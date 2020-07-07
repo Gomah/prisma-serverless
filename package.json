@@ -55,7 +55,7 @@
     "aws-lambda": "^1.0.6",
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
-    "copy-webpack-plugin": "^6.0.2",
+    "copy-webpack-plugin": "^6.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
