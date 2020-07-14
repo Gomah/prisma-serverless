@@ -77,7 +77,7 @@
     "serverless-webpack": "^5.3.2",
     "ts-loader": "^8.0.0",
     "ts-node": "^8.10.2",
-    "ts-node-dev": "^1.0.0-pre.50",
+    "ts-node-dev": "^1.0.0-pre.51",
     "typescript": "3.9.6",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
