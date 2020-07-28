@@ -74,7 +74,7 @@
     "serverless-dotenv-plugin": "^2.4.2",
     "serverless-offline": "^6.5.0",
     "serverless-prune-plugin": "^1.4.3",
-    "serverless-webpack": "^5.3.2",
+    "serverless-webpack": "^5.3.3",
     "ts-loader": "^8.0.1",
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.52",
