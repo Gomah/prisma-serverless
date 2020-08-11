@@ -55,12 +55,14 @@ module.exports = {
   // Copy generated schema & nexus files
   // TODO: Refactor, there's probably a better way to do that :)
   plugins: [
-    new CopyPlugin([
-      {
-        from: './src/generated',
-        to: 'src/src/generated',
-        toType: 'dir',
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './src/generated',
+          to: 'src/src/generated',
+          toType: 'dir',
+        },
+      ],
+    }),
   ],
 };
