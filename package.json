@@ -32,7 +32,7 @@
     "graphql": "^15.3.0",
     "graphql-import": "^1.0.2",
     "graphql-middleware": "^4.0.2",
-    "graphql-shield": "^7.3.4",
+    "graphql-shield": "^7.3.5",
     "graphql-tools": "^6.0.14",
     "jsonwebtoken": "^8.5.1",
     "nexus": "^0.26.1",
