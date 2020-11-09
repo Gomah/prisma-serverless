@@ -58,7 +58,7 @@
     "copy-webpack-plugin": "^6.2.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.12.1",
-    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-import-resolver-webpack": "^0.13.0",
     "eslint-plugin-graphql": "^4.0.0",
