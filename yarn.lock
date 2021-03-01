@@ -9766,10 +9766,10 @@ serialize-javascript@^5.0.1:
   dependencies:
     randombytes "^2.1.0"
 
-serverless-dotenv-plugin@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/serverless-dotenv-plugin/-/serverless-dotenv-plugin-3.8.0.tgz#e54e77a30ae35b1283e0b428ce49d2426b60828b"
-  integrity sha512-NiO3mz2e4N/4gDYArNKgCFyXazlob0ZnNZXNkyrtXKTiyHgHRvzKFKfcaiIJ3fDcwJqUvJlloVeOQLfDH3h0bA==
+serverless-dotenv-plugin@^3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/serverless-dotenv-plugin/-/serverless-dotenv-plugin-3.8.1.tgz#aac51c3dfa6d1e87c05694f11c8a9fdc102375d8"
+  integrity sha512-v3JqGogpa+z+WpK7Esbjnnm7DzLh3t1aGafXr/SvQqFyl7HDtLkXfEzb18henyPi0Sn8Kv3VtOMnHlLvpip5tw==
   dependencies:
     chalk "^4.1.0"
     dotenv "^8.2.0"
