@@ -73,7 +73,7 @@
     "serverless": "^2.1.1",
     "serverless-dotenv-plugin": "^3.8.1",
     "serverless-offline": "^6.8.0",
-    "serverless-prune-plugin": "^1.4.3",
+    "serverless-prune-plugin": "^1.4.4",
     "serverless-webpack": "^5.3.5",
     "ts-loader": "^8.0.17",
     "ts-node": "^9.1.1",
