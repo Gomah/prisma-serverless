@@ -6999,10 +6999,10 @@ is-boolean-object@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-boolean-object/-/is-boolean-object-1.0.1.tgz#10edc0900dd127697a92f6f9807c7617d68ac48e"
   integrity sha512-TqZuVwa/sppcrhUCAYkGBk7w0yxfQQnxq28fjkO53tnK9FQXmdwz2JS5+GjsWQ6RByES1K40nI+yDic5c9/aAQ==
 
-is-builtin-module@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/is-builtin-module/-/is-builtin-module-3.0.0.tgz#137d3d2425023a19a660fb9dd6ddfabe52c03466"
-  integrity sha512-/93sDihsAD652hrMEbJGbMAVBf1qc96kyThHQ0CAOONHaE3aROLpTjDe4WQ5aoC5ITHFxEq1z8XqSU7km+8amw==
+is-builtin-module@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/is-builtin-module/-/is-builtin-module-3.1.0.tgz#6fdb24313b1c03b75f8b9711c0feb8c30b903b00"
+  integrity sha512-OV7JjAgOTfAFJmHZLvpSTb4qi0nIILDV1gWPYDnDJUTNFM5aGlRAhk4QcT8i7TuAleeEV5Fdkqn3t4mS+Q11fg==
   dependencies:
     builtin-modules "^3.0.0"
 
@@ -10017,16 +10017,16 @@ serverless-prune-plugin@^1.5.0:
   dependencies:
     bluebird "^3.4.7"
 
-serverless-webpack@^5.4.1:
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/serverless-webpack/-/serverless-webpack-5.4.1.tgz#7d6cee2b097edc1cd05b5de559e4db3d29302df8"
-  integrity sha512-yhCFXHgbHjiSdvcFhQ+/X5Tgh+j7nnWQei37W3DVXaaJ1DDUHV2y+SrEjB3tb4JNDzUipndLzUgvspgPEPFHfg==
+serverless-webpack@^5.4.2:
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/serverless-webpack/-/serverless-webpack-5.4.2.tgz#ba6d5ffc6f9b75f74b529d92da2fd1e6b778b6bf"
+  integrity sha512-QX3ZQbCItACW8midkQf/w5gNdT2glSB4Aoxad5RU2xzXoWww/f9VOF5Et2bOLNFr+jlXTOk8XbcZxxL6AIan/A==
   dependencies:
     bestzip "^2.2.0"
     bluebird "^3.7.2"
     fs-extra "^9.1.0"
     glob "^7.1.6"
-    is-builtin-module "^3.0.0"
+    is-builtin-module "^3.1.0"
     lodash "^4.17.21"
     semver "^7.3.5"
   optionalDependencies:
