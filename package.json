@@ -28,7 +28,7 @@
     "apollo-server-lambda": "^2.24.0",
     "aws-sdk": "2.485.0",
     "bcryptjs": "^2.4.3",
-    "dotenv": "^8.2.0",
+    "dotenv": "^9.0.2",
     "graphql": "^15.5.0",
     "graphql-import": "^1.0.2",
     "graphql-middleware": "^6.0.7",
