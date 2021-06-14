@@ -9896,10 +9896,10 @@ serverless-prune-plugin@^1.5.0:
   dependencies:
     bluebird "^3.4.7"
 
-serverless-webpack@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/serverless-webpack/-/serverless-webpack-5.5.0.tgz#9f6f4b564041808a8b74150fedb85e96381b496f"
-  integrity sha512-05tkYPVMqUi/kauZ4mIIwTQBvsGrivN4pjvvBNlKXsC22URvAilLvxyJ/ivCOBwddk9cnwhbuENlZCXy0D5dhw==
+serverless-webpack@^5.5.1:
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/serverless-webpack/-/serverless-webpack-5.5.1.tgz#cd42a90d517678907b8b5b8612f762357bc54f3e"
+  integrity sha512-pQ0TmoHp7WTJIIiLBf36p+DUvuk64z7levBrkXTEy1H3bfDZGu7B8KuUD5bI3hInYaq3P95R2HAyTSgHYU4gYg==
   dependencies:
     bestzip "^2.2.0"
     bluebird "^3.7.2"
