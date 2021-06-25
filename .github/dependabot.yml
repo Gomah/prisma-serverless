@@ -1,0 +1,48 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "19:00"
+  open-pull-requests-limit: 99
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: aws-sdk
+    versions:
+    - "> 2.485.0"
+  - dependency-name: nexus-prisma
+    versions:
+    - "> 0.4.2"
+  - dependency-name: webpack
+    versions:
+    - 5.24.2
+    - 5.35.1
+  - dependency-name: serverless
+    versions:
+    - 2.20.1
+    - 2.21.1
+    - 2.23.0
+    - 2.25.2
+    - 2.28.0
+    - 2.28.7
+    - 2.29.0
+    - 2.30.3
+    - 2.31.0
+    - 2.33.1
+    - 2.35.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 8.0.0
+    - 8.1.0
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
+  - dependency-name: graphql-tools
+    versions:
+    - 7.0.2
+    - 7.0.3
+  - dependency-name: prisma
+    versions:
+    - 1.34.12
