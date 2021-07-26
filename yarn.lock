@@ -2407,10 +2407,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/aws-lambda@^8.10.31", "@types/aws-lambda@^8.10.79":
-  version "8.10.79"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.79.tgz#c87fcc10500d0524f583b7fd7828025d8aa834fd"
-  integrity sha512-YgpllvHcDrPfzyf8/a2+ScRoEtJQjAP0pSgIneWcVpfqHGmiAaS2oMO3e4y3InJMgrMyuxGPde72CBZS/X8vJA==
+"@types/aws-lambda@^8.10.31", "@types/aws-lambda@^8.10.81":
+  version "8.10.81"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.81.tgz#6d405269aad82e05a348687631aa9a587cdbe158"
+  integrity sha512-C1rFKGVZ8KwqhwBOYlpoybTSRtxu2433ea6JaO3amc6ubEe08yQoFsPa9aU9YqvX7ppeZ25CnCtC4AH9mhtxsQ==
 
 "@types/bcryptjs@^2.4.2":
   version "2.4.2"
